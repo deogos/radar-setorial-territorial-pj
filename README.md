@@ -1,7 +1,7 @@
 # Radar Setorial-Territorial PJ
 
 <!-- PUBLICATION -->
-Repositório temporariamente privado. O GitHub Pages está despublicado. Abra `index.html` localmente para usar a demo.
+Repositório público. O GitHub Pages está desativado. Abra `index.html` localmente para usar a demo.
 
 Consulta demonstrativa de contexto de crédito para apoiar a revisão de casos PJ em recuperação e reestruturação. Usa dados públicos do Banco Central e cadastro das 660 companhias ativas no snapshot da CVM, com cobertura financeira e enquadramento identificados.
 
