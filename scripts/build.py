@@ -7,6 +7,7 @@ def main():
     data=json.loads((root/'data/radar.json').read_text(encoding='utf-8'))
     page=(root/'web/index.template.html').read_text(encoding='utf-8')
     replacements={'STYLE':(root/'web/style.css').read_text(encoding='utf-8'),'ENGINE':(root/'web/engine.js').read_text(encoding='utf-8'),'APP':(root/'web/app.js').read_text(encoding='utf-8'),'DATA':json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')}
+    for key,name in [('DIRECTORY','company-directory.js'),('PROFILE','company-profile.js'),('AI','ai-context.js')]:replacements[key]=(root/'web'/name).read_text(encoding='utf-8')
     for key,value in replacements.items():page=page.replace('/*__'+key+'__*/',value)
     if '/*__' in page:raise ValueError('Marcador de build não preenchido')
     (root/'index.html').write_text(page,encoding='utf-8')

@@ -1,0 +1,20 @@
+const assert=require('node:assert/strict');
+let view;try{view=require('../web/company-profile.js');}catch{}
+assert.ok(view,'A ficha precisa tratar cobertura parcial e preparar a área futura de IA.');
+const base={cnpj:'00.000.001/0001-00',name:'Exemplo',legal_name:'Exemplo S.A.',cvm_code:10,uf:'SP',city:'São Paulo',section:null,cvm_sector:'Sem setor principal',mapping_status:'sem mapeamento',mapping_note:'Sem correspondência definida.',mapping_reviewed:false,financial_status:'missing',financial_scope:null,financial:{},questions:['Qual o fluxo de caixa?'],sources:{cad:'https://dados.cvm.gov.br/dataset/cia_aberta-cad'}};
+let html=view.render({company:base,metrics:null,status:null,sectorName:'Não enquadrado',sizeLabel:'Médias e grandes',month:'2026-08',aiPrompt:'Dados de teste'});
+assert.ok(html.includes('Sem enquadramento')&&html.includes('Sem demonstrativo'),'Lacunas devem ser visíveis na ficha.');
+assert.ok(!html.includes('data-cell="null|SP"'),'Empresa sem seção não pode abrir um grupo inexistente.');
+assert.ok(html.includes('Integração futura')&&html.includes('data-copy-ai')&&html.includes('data-export-ai'),'Ficha deve oferecer contexto local para a integração futura.');
+assert.ok(!/\b(undefined|NaN|Infinity)\b/.test(html));
+const financial={...base,section:'K',financial_status:'specialized',financial_scope:'consolidated',financial_date:'2026-06-30',financial_received:'2026-08-01',financial_version:1,financial:{'3.01':{value:100,label:'Receitas de Intermediação Financeira',start:'2026-01-01',end:'2026-06-30'}}};
+html=view.render({company:financial,metrics:null,status:null,sectorName:'Atividades financeiras',sizeLabel:'Grandes',month:'2026-08',aiPrompt:'ok'});
+assert.ok(html.includes('Demonstração especializada')&&html.includes('Receitas de Intermediação Financeira'));
+assert.ok(!html.includes('Liquidez corrente'),'Ficha especializada não aplica razão genérica.');
+const normal={...base,section:'C',financial_status:'available',financial_scope:'individual',financial_date:'2026-06-30',financial_received:'2026-08-01',financial_version:1,financial:{'1.01.01':{value:0,label:'Caixa e Equivalentes'},'1.01':{value:100},'2.01':{value:50}}};
+assert.equal(view.financial(normal).cash,0,'Zero publicado deve permanecer zero.');
+assert.equal(view.financial(normal).liquidity,2);
+assert.equal(view.financial(base).cash,null,'Ausência deve permanecer null.');
+html=view.render({company:{...base,name:'<script>x</script>'},metrics:null,status:null,sectorName:'Não enquadrado',sizeLabel:'Grandes',month:'2026-08',aiPrompt:'</textarea><script>evil</script>'});
+assert.ok(!html.includes('<script>evil</script>')&&!html.includes('<script>x</script>'),'Textos externos devem ser escapados.');
+console.log('Company profile: 10 behavior checks passed.');

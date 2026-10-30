@@ -8,7 +8,7 @@ Os arquivos em `data/` e a base incorporada em `index.html` constituem uma base 
 
 - Fonte de contexto de crédito: Banco Central do Brasil, SCR.data, versão 2, arquivos de 2025 e 2026. [Catálogo](https://dadosabertos.bcb.gov.br/dataset/scr_data).
 - Fonte cadastral e financeira das companhias: Comissão de Valores Mobiliários, Cadastro de Companhias Abertas, Formulário Cadastral e demonstrações ITR/DFP. [Portal oficial](https://dados.cvm.gov.br/).
-- Transformação: filtro PJ, padronização de dimensões, agregação de saldos, cálculo de razões e mapeamento econômico editorial das 12 companhias, conforme a documentação do case.
+- Transformação: filtro PJ, padronização de dimensões, agregação de saldos, cálculo de razões e mapeamentos editoriais dos 12 exemplos, propostas automáticas a validar para o universo ativo e ausências identificadas, conforme a documentação do case.
 
 URLs, tamanhos, datas de observação e hashes SHA-256 dos arquivos utilizados estão em `data/manifesto.json`. Os arquivos originais não foram incluídos devido ao volume e podem ser obtidos nas URLs registradas.
 

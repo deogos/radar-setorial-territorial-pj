@@ -52,7 +52,7 @@ O SCR.data público não fornece o histórico individual de uma empresa por CNPJ
 
 O [cadastro de companhias abertas](https://dados.cvm.gov.br/dataset/cia_aberta-cad) fornece a identificação corporativa e o cadastro da sede. O [FCA](https://dados.cvm.gov.br/dataset/cia_aberta-doc-fca) oferece descrição da atividade. Os conjuntos [ITR](https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr) e [DFP](https://dados.cvm.gov.br/dataset/cia_aberta-doc-dfp) fornecem demonstrações estruturadas.
 
-A amostra contém 12 companhias não financeiras com dados públicos: Tupy, Marcopolo, WEG, Romi, Lojas Renner, Magazine Luiza, Rumo, Tegma, MRV, Direcional, Energisa e Copel. A escolha privilegia documentação e exemplos de diferentes atividades. Não representa composição de carteira, avaliação de risco ou vínculo com o banco.
+O cadastro consultável contém as 660 companhias ativas distintas do arquivo CVM. As 12 companhias originais permanecem como exemplos com enquadramento editorial: Tupy, Marcopolo, WEG, Romi, Lojas Renner, Magazine Luiza, Rumo, Tegma, MRV, Direcional, Energisa e Copel. Nas demais, 491 associações são propostas automáticas a validar e 157 permanecem sem seção definida. A lista não representa carteira do banco nem análise individual validada.
 
 O setor da CVM e a seção CNAE não são intercambiáveis automaticamente. Usamos a atividade declarada para documentar um enquadramento econômico editorial. Holdings recebem uma ressalva específica. Uma implantação interna deve usar o cadastro autorizado e o enquadramento validado pela organização.
 
@@ -68,11 +68,13 @@ O setor da CVM e a seção CNAE não são intercambiáveis automaticamente. Usam
 | UFs | 27 |
 | Categorias econômicas | 21 seções CNAE e “Não informados” |
 | Portes publicados | Micro, pequeno, médio, grande e indisponível |
-| Companhias na amostra | 12 |
+| Companhias ativas consultáveis | 660 |
+| Enquadramentos editoriais / propostos / ausentes | 12 / 491 / 157 |
+| Financeiros padronizados / especializados / ausentes | 592 / 48 / 20 |
 
 A coleta e o preparo ocorreram em 29/10/2026, no horário de São Paulo. As datas precisas de observação dos arquivos e de construção estão nos manifestos. Agosto de 2026 é a última competência encontrada no arquivo de crédito utilizado. Não se presumiu uma competência mais recente.
 
-Os demonstrativos das companhias têm datas próprias. No snapshot, WEG e Romi já têm informações de setembro de 2026; as demais selecionadas têm posição de junho de 2026. A interface exibe competência, versão e data de recebimento na CVM.
+Os demonstrativos têm datas próprias e podem ser consolidados ou individuais. No universo ampliado há 423 seleções consolidadas, 217 individuais e 20 companhias sem contas utilizáveis nos períodos baixados. WEG e Romi, por exemplo, têm posição de setembro de 2026. A interface identifica competência, escopo, versão, recebimento e contas ausentes.
 
 ## 6. Tratamento e modelo de dados
 
@@ -86,7 +88,7 @@ Os demonstrativos das companhias têm datas próprias. No snapshot, WEG e Romi j
 6. Agregar os saldos por mês, UF, seção e porte, somando as demais dimensões detalhadas.
 7. Publicar CSV e JSON com valores monetários em reais.
 8. Ler a CVM em latin-1, selecionar sede e registro ativo e obter a atividade no FCA.
-9. Selecionar demonstrações consolidadas, exercício “ÚLTIMO”, posição de fim do período e versão mais recente.
+9. Selecionar a referência e versão mais recente com contas utilizáveis, no exercício “ÚLTIMO”; preferir consolidado no mesmo documento e identificar explicitamente o escopo individual quando selecionado.
 10. Gerar a aplicação com os dados incorporados e validar os resultados.
 
 As linhas publicadas no arquivo do SCR são o ponto de agregação. A implementação não mistura um total já consolidado com seus detalhes. Dimensões desconhecidas ou saldos monetários negativos interrompem o tratamento para inspeção, em vez de serem silenciosamente convertidos.
@@ -115,7 +117,7 @@ No JSON, os registros são arrays compactos. A ordem das colunas está em `meta.
 
 O motor monta uma estrutura em memória para o porte selecionado. Cada registro contribui para seu setor e UF, para o mesmo setor no Brasil e para os totais correspondentes. Ao mudar o filtro, os numeradores e denominadores são recalculados com o mesmo universo.
 
-Os presets são médias e grandes, grandes, médias, micro e pequenas e todos os portes. “Todos” inclui o porte indisponível. O porte do comparador não é atribuído automaticamente à companhia da CVM.
+A consulta de companhias usa busca e paginação de 25 registros, com filtros por cobertura financeira e situação do enquadramento. O radar mantém os presets de médias e grandes, grandes, médias, micro e pequenas e todos os portes. “Todos” inclui o porte indisponível. O porte do comparador não é atribuído automaticamente à companhia da CVM.
 
 ## 7. Fórmulas que você precisa explicar
 
@@ -206,7 +208,7 @@ Uma evolução pode usar a capacidade de revisão da equipe e a relevância aval
 
 ## 11. Leitura dos demonstrativos das empresas
 
-As informações da CVM são consolidadas e os valores da escala MIL são multiplicados por mil para obter reais. A seleção usa a última versão disponível por competência, com exercício “ÚLTIMO”. Para receita e fluxo de caixa, o intervalo começa em janeiro e termina na data de referência, evitando misturar trimestre isolado com acumulado.
+As informações da CVM preservam o escopo consolidado ou individual e os valores da escala MIL são multiplicados por mil para obter reais. A seleção usa referência/versão com contas utilizáveis, exercício “ÚLTIMO” e encerramento na data de referência. Receita e fluxo de caixa mantêm o período acumulado do exercício publicado, inclusive exercícios que não começam em janeiro. As 48 demonstrações especializadas exibem rótulos originais e não recebem automaticamente os indicadores padronizados abaixo.
 
 | Informação | Conta utilizada |
 |---|---|
@@ -274,11 +276,11 @@ O leitor processa o conteúdo dos ZIPs em streaming. Não é necessário descomp
 
 ## 14. Qualidade e evidências de validação
 
-O tratamento verificou dimensões e saldos em todas as competências. O validador confirmou integridade do esquema, unicidade da chave, valores não negativos, consistência de denominadores, presença das 27 UFs e integridade da amostra.
+O tratamento verificou dimensões e saldos em todas as competências. O validador confirmou integridade do esquema, unicidade da chave, valores não negativos, consistência de denominadores, presença das 27 UFs e integridade do universo ativo e dos estados de cobertura.
 
 Uma auditoria adicional leu diretamente o bruto de maio e agosto de 2026 e recalculou sete saldos com Decimal, de forma independente da agregação por centavos inteiros. Foram conferidos o total nacional de médias e grandes e quatro recortes: construção/MG, indústria/SC, comércio/RS e transporte/SP. Os dez conjuntos reconciliaram sem diferença.
 
-No navegador Edge headless, foram exercitados filtros, navegação, regras, busca, exportações, conteúdo das quatro visões e controle do menu lateral. As capturas desktop, notebook e tela estreita foram inspecionadas. O relatório registra o escopo e não equivale à homologação em todos os navegadores ou no ambiente corporativo.
+No navegador Edge headless, foram exercitados filtros, navegação, regras, busca, exportações, conteúdo das quatro visões e controle do menu. Na ampliação, 19 verificações por cenário confirmaram paginação, consulta por CNPJ, ausência de demonstração/mapeamento, ficha especializada e contexto de IA em desktop e tela estreita. As capturas foram inspecionadas. O relatório registra o escopo e não equivale à homologação em todos os navegadores ou no ambiente corporativo.
 
 ## 15. Arquitetura AWS e modernização
 
@@ -335,3 +337,15 @@ Uma formulação possível é:
 > Estruturei uma solução descritiva com dados públicos e empresas reais. A preocupação foi ligar cada sinal a uma investigação útil, manter os cálculos verificáveis e mostrar como o protótipo poderia evoluir para uma rotina operada pela área.
 
 Se perguntarem sobre ferramentas usadas no desenvolvimento, responda de forma fiel ao processo. Dominar e explicar as escolhas vale mais do que atribuir ao case resultados ou validações que ele ainda não possui.
+
+## 19. Ampliação e integração futura com IA
+
+A ampliação inclui todas as 660 companhias ativas do snapshot, sem excluir um cadastro por falta de FCA ou demonstração. O financeiro pode ser utilizável, especializado ou ausente; as contas efetivamente publicadas conservam rótulo, escala e período. Uma ausência é exibida como indisponível e não como zero.
+
+No enquadramento, os 12 casos editoriais originais são distinguidos das 491 propostas por categoria CVM e dos 157 sem associação. Uma proposta não confirma CNAE nem valida a pertinência do comparador para aquele grupo econômico.
+
+A área “Análise assistida por IA” prepara a ficha para um futuro serviço interno. “Copiar ficha para IA” gera um texto de entrada e “Baixar contexto JSON” preserva dados, fontes, períodos, filtros, parâmetros e lacunas. A demo não chama modelo e não produz parecer fictício. O espaço de parecer permanece identificado como aguardando integração.
+
+Uma integração real poderá solicitar síntese de fatos, interpretações condicionais, pontos de atenção, lacunas e perguntas, com referências às evidências. A opinião será preliminar e revisada pelo analista. O modelo não deve transformar taxa do grupo em inadimplência individual, inventar dado ausente ou tratar texto público como instrução. O contrato completo está em `INTEGRACAO_IA.md`.
+
+Para se preparar para a banca, use `STORYTELLING_GESTOR.md` e `AVALIACAO_COMO_GESTOR.md`. A ampliação do cadastro deve ser apresentada junto com a cobertura e a qualidade, sem confundir 660 registros com 660 pareceres validados.

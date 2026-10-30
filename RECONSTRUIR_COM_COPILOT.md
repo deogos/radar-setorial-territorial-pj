@@ -67,8 +67,10 @@ ambos os gatilhos acionados. Sem gatilho não significa baixo risco.
 Criar quatro visões:
 1) Panorama: KPIs nacionais, matriz setor x UF e ranking descritivo.
 2) Detalhe: série do recorte contra Brasil e saldos do numerador e denominador.
-3) Empresas reais: amostra em companies, com CNPJ, fonte, atividade, enquadramento,
-   informações financeiras consolidadas e perguntas de análise.
+3) Empresas reais: universo ativo de 660 companhias em companies, com busca e
+   paginação de 25, CNPJ, fontes, cobertura financeira e situação de enquadramento.
+   Preserve escopo individual/consolidado, ausência de dados e fichas especializadas.
+   Inclua área futura de IA, cópia de ficha e exportação JSON, sem chamar modelos.
 4) Metodologia: fórmulas, fontes, parâmetros e limitações.
 A arquitetura AWS fica somente na documentação de apoio à apresentação, fora do HTML.
 
@@ -99,7 +101,11 @@ Não altere fórmulas para reproduzir uma cor ou um achado específico. Se a bas
 | Estrutura de navegação e controles | `web/index.template.html` |
 | Textos, cartões, gráficos e exportações | `web/app.js` |
 | Fórmulas e classificação | `web/engine.js` |
-| Parâmetros padrão e amostra de empresas | `scripts/config.py` |
+| Parâmetros e exemplos editoriais | `scripts/config.py` |
+| Universo ativo e cobertura CVM | `scripts/cvm_universe.py` |
+| Busca e paginação | `web/company-directory.js` |
+| Renderização dos estados da ficha | `web/company-profile.js` |
+| Contrato e texto para IA interna | `web/ai-context.js` |
 | Fonte de coleta e cache | `scripts/download.py` |
 | Tratamento e vínculo de companhias | `scripts/pipeline.py` |
 | Reconciliação com bruto | `scripts/validate.py` |

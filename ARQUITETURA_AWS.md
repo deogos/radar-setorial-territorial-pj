@@ -176,3 +176,8 @@ Infraestrutura como código e configuração versionada devem acompanhar a impla
 **O que acontece quando a execução falha?** A publicação anterior permanece disponível com sua competência. A execução falha deixa registro e pode ser repetida ou corrigida sem alterar silenciosamente os resultados em uso.
 
 **Isso já está implantado na AWS?** Não. O case apresenta uma demo local executável e uma proposta documentada de evolução, com um caminho de migração verificável.
+
+
+## 11. Integração futura com IA interna
+
+A camada de consulta poderá fornecer a ficha versionada para um adaptador do serviço de IA interno do banco, após autenticação e autorização. O contrato já preparado em `web/ai-context.js` conserva evidências, fontes, períodos, parâmetros, situação do enquadramento e dados ausentes. O modelo poderá elaborar um parecer preliminar, com referências, que retorna à aplicação para revisão humana e registro de versão. Nenhum fornecedor ou API privada é presumido. Esta entrega prepara e exporta o contexto localmente; não conecta o serviço nem produz uma opinião simulada. Detalhes em `INTEGRACAO_IA.md`.

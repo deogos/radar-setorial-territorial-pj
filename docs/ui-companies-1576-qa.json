@@ -1,55 +1,79 @@
 {
   "checks": [
     {
-      "label": "Menu contém quatro visões",
+      "label": "Universo contém 660 CNPJs ativos",
       "passed": true
     },
     {
-      "label": "Arquitetura removida da interface",
+      "label": "Lista inicial paginada em 25 companhias",
       "passed": true
     },
     {
-      "label": "Rodapé lateral contém apenas Case de Analytics",
+      "label": "Navegação para a segunda página",
       "passed": true
     },
     {
-      "label": "Botão inicia com estado de menu aberto",
+      "label": "Busca de CNPJ sem pontuação encontra Tupy",
       "passed": true
     },
     {
-      "label": "Botão fecha menu e atualiza acessibilidade",
+      "label": "Ficha selecionada inclui área futura de IA",
       "passed": true
     },
     {
-      "label": "Área de consulta ocupa o espaço liberado",
+      "label": "Companhias sem demonstrativo permanecem consultáveis",
       "passed": true
     },
     {
-      "label": "Botão restaura menu e seu estado",
+      "label": "Ficha especializada evita indicador genérico",
       "passed": true
     },
     {
-      "label": "Navegação válida: overview",
+      "label": "Sem mapeamento não recebe grupo inventado",
       "passed": true
     },
     {
-      "label": "Navegação válida: detail",
+      "label": "JSON exporta a companhia atual com lacunas e IA não conectada",
       "passed": true
     },
     {
-      "label": "Navegação válida: companies",
+      "label": "Contexto de IA preserva a competência mesmo sem grupo",
       "passed": true
     },
     {
-      "label": "Navegação válida: method",
+      "label": "Busca encontra companhia e data própria do demonstrativo",
       "passed": true
     },
     {
-      "label": "Rótulo antigo removido",
+      "label": "Ficha exportada preserva companhia e espaço de IA sem painel técnico",
       "passed": true
     },
     {
-      "label": "Sem transbordamento horizontal da página",
+      "label": "Menu pode ser recolhido",
+      "passed": true
+    },
+    {
+      "label": "Quatro visões sem arquitetura AWS no HTML",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: overview",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: detail",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: companies",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: method",
+      "passed": true
+    },
+    {
+      "label": "Sem transbordamento horizontal",
       "passed": true
     }
   ],

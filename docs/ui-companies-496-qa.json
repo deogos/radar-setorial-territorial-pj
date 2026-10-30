@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "label": "Universo contém 660 CNPJs ativos",
+      "passed": true
+    },
+    {
+      "label": "Lista inicial paginada em 25 companhias",
+      "passed": true
+    },
+    {
+      "label": "Navegação para a segunda página",
+      "passed": true
+    },
+    {
+      "label": "Busca de CNPJ sem pontuação encontra Tupy",
+      "passed": true
+    },
+    {
+      "label": "Ficha selecionada inclui área futura de IA",
+      "passed": true
+    },
+    {
+      "label": "Companhias sem demonstrativo permanecem consultáveis",
+      "passed": true
+    },
+    {
+      "label": "Ficha especializada evita indicador genérico",
+      "passed": true
+    },
+    {
+      "label": "Sem mapeamento não recebe grupo inventado",
+      "passed": true
+    },
+    {
+      "label": "JSON exporta a companhia atual com lacunas e IA não conectada",
+      "passed": true
+    },
+    {
+      "label": "Contexto de IA preserva a competência mesmo sem grupo",
+      "passed": true
+    },
+    {
+      "label": "Busca encontra companhia e data própria do demonstrativo",
+      "passed": true
+    },
+    {
+      "label": "Ficha exportada preserva companhia e espaço de IA sem painel técnico",
+      "passed": true
+    },
+    {
+      "label": "Menu pode ser recolhido",
+      "passed": true
+    },
+    {
+      "label": "Quatro visões sem arquitetura AWS no HTML",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: overview",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: detail",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: companies",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido: method",
+      "passed": true
+    },
+    {
+      "label": "Sem transbordamento horizontal",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "width": 496,
+  "view": "companies",
+  "passed": true
+}
