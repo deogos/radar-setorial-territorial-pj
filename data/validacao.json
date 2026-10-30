@@ -1,0 +1,233 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "Chave mês/UF/seção/porte sem duplicação",
+      "passed": true
+    },
+    {
+      "check": "Esquema com sete saldos monetários",
+      "passed": true
+    },
+    {
+      "check": "Saldos monetários não negativos",
+      "passed": true
+    },
+    {
+      "check": "Inadimplência e AP não excedem carteira",
+      "passed": true
+    },
+    {
+      "check": "Vencimentos de curto prazo não excedem carteira a vencer",
+      "passed": true
+    },
+    {
+      "check": "Todas as competências têm as 27 UFs",
+      "passed": true
+    },
+    {
+      "check": "Doze CNPJs distintos na amostra",
+      "passed": true
+    },
+    {
+      "check": "Empresas com enquadramento rastreável",
+      "passed": true
+    },
+    {
+      "check": "Datas de recebimento compatíveis com demonstrações",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-05 / BR / ALL, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-05 / MG / F, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-05 / SC / C, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-05 / RS / G, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-05 / SP / H, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-08 / BR / ALL, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-08 / MG / F, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-08 / SC / C, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-08 / RS / G, sete saldos",
+      "passed": true
+    },
+    {
+      "check": "Auditoria Decimal do bruto: 2026-08 / SP / H, sete saldos",
+      "passed": true
+    }
+  ],
+  "independent_raw_audits": [
+    {
+      "month": "2026-05",
+      "uf": "BR",
+      "section": "ALL",
+      "raw_brl": [
+        "2217217062022.92",
+        "40920621883.66",
+        "119857988930.55",
+        "2190926540113.62",
+        "432096365730.45",
+        "568688291305.92",
+        "8597997609.35"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-05",
+      "uf": "MG",
+      "section": "F",
+      "raw_brl": [
+        "11913855945.99",
+        "319648833.71",
+        "549062146.84",
+        "11735747016.11",
+        "1994418668.41",
+        "3799896924.55",
+        "61850218.30"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-05",
+      "uf": "SC",
+      "section": "C",
+      "raw_brl": [
+        "40783825048.55",
+        "573075717.24",
+        "1479555298.94",
+        "40370091818.66",
+        "7242484696.06",
+        "11972650365.15",
+        "168218107.00"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-05",
+      "uf": "RS",
+      "section": "G",
+      "raw_brl": [
+        "34968508089.74",
+        "1252825208.82",
+        "2009458091.53",
+        "34200446324.93",
+        "8269345901.40",
+        "13264293921.16",
+        "251270171.08"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-05",
+      "uf": "SP",
+      "section": "H",
+      "raw_brl": [
+        "66114121276.80",
+        "1406460793.12",
+        "9592132869.70",
+        "65331824348.25",
+        "8404813115.35",
+        "11278971959.83",
+        "208936947.93"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-08",
+      "uf": "BR",
+      "section": "ALL",
+      "raw_brl": [
+        "2256632269027.13",
+        "44357951035.93",
+        "126395252542.31",
+        "2229062750535.27",
+        "470372820348.15",
+        "555651026382.63",
+        "7833526291.18"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-08",
+      "uf": "MG",
+      "section": "F",
+      "raw_brl": [
+        "12222047393.97",
+        "361062384.02",
+        "658086088.76",
+        "12017244898.62",
+        "2086435319.80",
+        "3807346156.46",
+        "86527537.22"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-08",
+      "uf": "SC",
+      "section": "C",
+      "raw_brl": [
+        "41942212177.33",
+        "603569390.14",
+        "1534247395.50",
+        "41562937108.22",
+        "7878686434.34",
+        "12779796328.78",
+        "122372878.21"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-08",
+      "uf": "RS",
+      "section": "G",
+      "raw_brl": [
+        "34514728377.28",
+        "1401619772.33",
+        "2162497724.33",
+        "33677380536.05",
+        "7686695320.47",
+        "13225098663.33",
+        "225787786.58"
+      ],
+      "max_difference_brl": "0.00"
+    },
+    {
+      "month": "2026-08",
+      "uf": "SP",
+      "section": "H",
+      "raw_brl": [
+        "69807274545.44",
+        "1282396130.45",
+        "9433977777.06",
+        "69188939099.09",
+        "8421584726.22",
+        "11324445725.57",
+        "184340786.70"
+      ],
+      "max_difference_brl": "0.00"
+    }
+  ]
+}

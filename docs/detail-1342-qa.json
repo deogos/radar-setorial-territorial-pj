@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "label": "Matriz com 22 categorias publicadas",
+      "passed": true
+    },
+    {
+      "label": "Matriz com 27 UFs por categoria",
+      "passed": true
+    },
+    {
+      "label": "Última competência disponível selecionada",
+      "passed": true
+    },
+    {
+      "label": "Célula abre detalhe correto",
+      "passed": true
+    },
+    {
+      "label": "Série histórica renderizada em SVG",
+      "passed": true
+    },
+    {
+      "label": "Primeiro mês não recebe gatilho sem histórico",
+      "passed": true
+    },
+    {
+      "label": "Filtro todos os portes recalcula o saldo",
+      "passed": true
+    },
+    {
+      "label": "Parâmetro editável aplicado",
+      "passed": true
+    },
+    {
+      "label": "Parâmetros restaurados",
+      "passed": true
+    },
+    {
+      "label": "Doze empresas reais disponíveis",
+      "passed": true
+    },
+    {
+      "label": "Empresa selecionada com data própria de demonstrativo",
+      "passed": true
+    },
+    {
+      "label": "Consulta informa limitação temporal",
+      "passed": true
+    },
+    {
+      "label": "Busca por empresa filtra a amostra",
+      "passed": true
+    },
+    {
+      "label": "Ficha exportada preserva empresa e parâmetros",
+      "passed": true
+    },
+    {
+      "label": "CSV exportado preserva procedência e parâmetros",
+      "passed": true
+    },
+    {
+      "label": "Metodologia exibe resultado dos controles",
+      "passed": true
+    },
+    {
+      "label": "Arquitetura diferencia proposta de implantação",
+      "passed": true
+    },
+    {
+      "label": "Modo apresentação funciona",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido na visão overview",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido na visão detail",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido na visão companies",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido na visão method",
+      "passed": true
+    },
+    {
+      "label": "Conteúdo válido na visão architecture",
+      "passed": true
+    },
+    {
+      "label": "Sem transbordamento horizontal da página",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "width": 1342,
+  "overflow": false,
+  "passed": true,
+  "view": "detail"
+}
