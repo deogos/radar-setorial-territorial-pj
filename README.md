@@ -55,6 +55,8 @@ Ter cadastro disponível não significa ter uma análise individual de crédito 
 | `INTEGRACAO_IA.md` | Contrato da ficha, integração futura e revisão do parecer |
 | `ARQUITETURA_AWS.md` | Proposta de evolução, diagrama e justificativas |
 | `RECONSTRUIR_COM_COPILOT.md` | Instruções para reconstrução e adaptação ao IDS |
+| `assets/README.md` | 13 capturas em 16:9, galeria e legendas para o PowerPoint |
+| `docs/FLUXO_SCR_NA_PRATICA.md` | Exemplo executado do CSV bruto ao cálculo do radar |
 | `docs/ACHADOS.md` | Resultados numéricos e leituras para a apresentação |
 | `docs/RELATORIO_QUALIDADE.md` | Verificações e limites da validação |
 | `scripts/` | Coleta, tratamento, validação e build |

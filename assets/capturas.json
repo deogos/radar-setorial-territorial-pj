@@ -1,0 +1,127 @@
+{
+  "source_commit": "4266249de2e6c2d3a1ae7eb01a716c98e289b3e4",
+  "snapshot_date": "2026-10-30",
+  "format": "PNG",
+  "canvas": "1920x1080",
+  "captures": [
+    {
+      "name": "01_fluxo_dados",
+      "kind": "processo_didatico",
+      "width": 1920,
+      "height": 1080,
+      "file": "01_fluxo_dados.png",
+      "bytes": 114751,
+      "sha256": "082c78bc6511929d1a5146b07806235625ba3a07ab420b7c07a8c9ac712f3122"
+    },
+    {
+      "name": "02_csv_original",
+      "kind": "processo_didatico",
+      "width": 1920,
+      "height": 1080,
+      "file": "02_csv_original.png",
+      "bytes": 123513,
+      "sha256": "28f1a5aa3bb7f9ae20bbf64bb44d9665b4bbb9c4d7b4c98badc8dfdd6e44e8ad"
+    },
+    {
+      "name": "03_padronizacao",
+      "kind": "processo_didatico",
+      "width": 1920,
+      "height": 1080,
+      "file": "03_padronizacao.png",
+      "bytes": 102607,
+      "sha256": "ceda09dbba1d06baaf3858486f7b181d1bb9867c6fa8285caef3e749e522f0bf"
+    },
+    {
+      "name": "04_agregacao",
+      "kind": "processo_didatico",
+      "width": 1920,
+      "height": 1080,
+      "file": "04_agregacao.png",
+      "bytes": 117767,
+      "sha256": "03b3710c2581341b862db75b5c04b147ee8c85b2bcd8f94c7c6c298c2c149525"
+    },
+    {
+      "name": "05_calculo_gatilho",
+      "kind": "processo_didatico",
+      "width": 1920,
+      "height": 1080,
+      "file": "05_calculo_gatilho.png",
+      "bytes": 149298,
+      "sha256": "b3e79b0039eaff76919e43ab7a9dfd011c00d46986a783e8f7668083341168f7"
+    },
+    {
+      "name": "06_validacao",
+      "kind": "processo_didatico",
+      "width": 1920,
+      "height": 1080,
+      "file": "06_validacao.png",
+      "bytes": 134970,
+      "sha256": "89cbbc84057476ce5092920ac68167c032c888a504a7e892247333735791114f"
+    },
+    {
+      "name": "07_panorama",
+      "kind": "tela_real_da_demo",
+      "width": 1920,
+      "height": 1080,
+      "file": "07_panorama.png",
+      "bytes": 160115,
+      "sha256": "c55cb253b717f11d6718d5612c4cf6b03dd8b70f7ddc9cf5296d5a7471920be8"
+    },
+    {
+      "name": "08_detalhe_comercio_sp",
+      "kind": "tela_real_da_demo",
+      "width": 1920,
+      "height": 1080,
+      "file": "08_detalhe_comercio_sp.png",
+      "bytes": 113557,
+      "sha256": "e32f12f445a10e81fe74f90ea660ee059d2d5468324d8cb6dbc9fd2b996ad346"
+    },
+    {
+      "name": "09_gatilhos",
+      "kind": "tela_real_da_demo",
+      "width": 1920,
+      "height": 1080,
+      "file": "09_gatilhos.png",
+      "bytes": 118064,
+      "sha256": "523f311796132adb85ff7bf66f01d454ed09e73ad5318656b7c1f7dfd58ed01d"
+    },
+    {
+      "name": "10_busca_companhias",
+      "kind": "tela_real_da_demo",
+      "width": 1920,
+      "height": 1080,
+      "file": "10_busca_companhias.png",
+      "bytes": 109503,
+      "sha256": "f71ea1f004d651db8f7091e1f95156694c6d02702418357603d20d04a2f97fee"
+    },
+    {
+      "name": "11_ficha_empresa",
+      "kind": "tela_real_da_demo",
+      "width": 1920,
+      "height": 1080,
+      "file": "11_ficha_empresa.png",
+      "bytes": 109830,
+      "sha256": "4dfb0e2bc405f4e760bc530c32f99dc948e47dada3362b4679bef3f8a9a0488e"
+    },
+    {
+      "name": "12_ia_futura",
+      "kind": "tela_real_da_demo",
+      "width": 1920,
+      "height": 1080,
+      "file": "12_ia_futura.png",
+      "bytes": 105611,
+      "sha256": "78880f5db03a80c52a27733f7c4b72612a10a87c5711bf6ed0f3cfca327b9408"
+    },
+    {
+      "name": "13_metodologia",
+      "kind": "tela_real_da_demo",
+      "width": 1920,
+      "height": 1080,
+      "file": "13_metodologia.png",
+      "bytes": 146154,
+      "sha256": "014280b2ad384f1d40d488ba204d22caf91ad9d2e03cb35df9e0fb2c6eb03f60"
+    }
+  ],
+  "computer_use": "Initialization failed twice: failed to write kernel assets (os error 3). Captured using installed Microsoft Edge headless.",
+  "capture_method": "Edge headless; interface screenshots use the real rendered DOM after filters, frozen for stable painting. Process views are explicitly didactic and use actual source values."
+}

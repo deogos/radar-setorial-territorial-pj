@@ -1,0 +1,51 @@
+{
+  "exemplo": "Comércio / SP / médias e grandes / agosto de 2026",
+  "arquivo_fonte": "scrdata_2026.zip -> scrdata_202608.csv",
+  "contagens": {
+    "linhas_lidas_agosto": 313138,
+    "linhas_pf_excluidas": 182271,
+    "linhas_pj_agosto": 130867,
+    "linhas_do_recorte": 428,
+    "contagens_de_operacoes_suprimidas_no_recorte": 74
+  },
+  "linhas_por_porte": {
+    "medio": 239,
+    "grande": 189
+  },
+  "agregados_conferidos_com_snapshot": true,
+  "atual_recalculado_do_bruto": {
+    "carteira_ativa": 111899626955.73,
+    "carteira_inadimplencia": 4999484596.98,
+    "ativo_problematico": 10845325860.89,
+    "carteira_a_vencer": 108903853190.44,
+    "a_vencer_ate_90_dias": 39624991440.42,
+    "a_vencer_de_91_ate_360_dias": 37539773398.74,
+    "vencido_de_15_ate_90_dias": 751505511.64
+  },
+  "maio_sp_do_snapshot": {
+    "carteira_ativa": 111845768286.54,
+    "carteira_inadimplencia": 4283992993.07,
+    "ativo_problematico": 9836950007.32,
+    "carteira_a_vencer": 109007401081.58,
+    "a_vencer_ate_90_dias": 39660847948.57,
+    "a_vencer_de_91_ate_360_dias": 36759244458.17,
+    "vencido_de_15_ate_90_dias": 1037305816.52
+  },
+  "agosto_brasil_do_snapshot": {
+    "carteira_ativa": 399948099845.75,
+    "carteira_inadimplencia": 17643119671.67,
+    "ativo_problematico": 32437123780.77,
+    "carteira_a_vencer": 388999014248.11,
+    "a_vencer_ate_90_dias": 109841800279.81,
+    "a_vencer_de_91_ate_360_dias": 132384424544.53,
+    "vencido_de_15_ate_90_dias": 2717454263.32
+  },
+  "indicadores": {
+    "inadimplencia_pct": 4.467829547776694,
+    "inadimplencia_maio_pct": 3.8302682870350084,
+    "referencia_brasil_pct": 4.411352292578589,
+    "variacao_tres_meses_pp": 0.6375612607416858,
+    "diferenca_brasil_pp": 0.056477255198105425
+  },
+  "nota": "Agosto/SP foi recalculado do CSV bruto. Maio/SP e agosto/Brasil foram lidos do agregado já incluído no radar. A taxa pertence ao grupo, não a uma empresa."
+}
