@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "label": "Menu contém quatro visões",
+      "passed": true
+    },
+    {
+      "label": "Arquitetura removida da interface",
+      "passed": true
+    },
+    {
+      "label": "Rodapé lateral contém apenas Case de Analytics",
+      "passed": true
+    },
+    {
+      "label": "Botão inicia com estado de menu aberto",
+      "passed": true
+    },
+    {
+      "label": "Botão fecha menu e atualiza acessibilidade",
+      "passed": true
+    },
+    {
+      "label": "Área de consulta ocupa o espaço liberado",
+      "passed": true
+    },
+    {
+      "label": "Botão restaura menu e seu estado",
+      "passed": true
+    },
+    {
+      "label": "Navegação válida: overview",
+      "passed": true
+    },
+    {
+      "label": "Navegação válida: detail",
+      "passed": true
+    },
+    {
+      "label": "Navegação válida: companies",
+      "passed": true
+    },
+    {
+      "label": "Navegação válida: method",
+      "passed": true
+    },
+    {
+      "label": "Rótulo antigo removido",
+      "passed": true
+    },
+    {
+      "label": "Sem transbordamento horizontal da página",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "width": 1576,
+  "view": "overview",
+  "passed": true
+}

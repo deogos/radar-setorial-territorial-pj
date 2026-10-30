@@ -235,7 +235,7 @@ Use Copel para ilustrar um gatilho de diferença territorial. Use MRV e Direcion
 
 Em “Ajustar gatilhos”, aumente o piso de 100 para 1.000 milhões e observe a seleção. Restaure o padrão antes de concluir ou mudar de exemplo.
 
-O botão de CSV exporta a visão com filtros e parâmetros. A consulta por empresa permite baixar uma ficha HTML que também pode ser impressa. O modo apresentação amplia a área útil escondendo a navegação lateral; o botão permite retornar.
+O botão de CSV exporta a visão com filtros e parâmetros. A consulta por empresa permite baixar uma ficha HTML que também pode ser impressa. O botão “Fechar menu” recolhe a navegação lateral e passa a mostrar “Abrir menu” para restaurá-la.
 
 ## 13. Reproduzir no trabalho
 
@@ -278,7 +278,7 @@ O tratamento verificou dimensões e saldos em todas as competências. O validado
 
 Uma auditoria adicional leu diretamente o bruto de maio e agosto de 2026 e recalculou sete saldos com Decimal, de forma independente da agregação por centavos inteiros. Foram conferidos o total nacional de médias e grandes e quatro recortes: construção/MG, indústria/SC, comércio/RS e transporte/SP. Os dez conjuntos reconciliaram sem diferença.
 
-No navegador Edge headless, foram exercitados filtros, navegação, regras, busca, exportações, conteúdo das cinco visões e modo apresentação. As capturas desktop, notebook e tela estreita foram inspecionadas. O relatório registra o escopo e não equivale à homologação em todos os navegadores ou no ambiente corporativo.
+No navegador Edge headless, foram exercitados filtros, navegação, regras, busca, exportações, conteúdo das quatro visões e controle do menu lateral. As capturas desktop, notebook e tela estreita foram inspecionadas. O relatório registra o escopo e não equivale à homologação em todos os navegadores ou no ambiente corporativo.
 
 ## 15. Arquitetura AWS e modernização
 

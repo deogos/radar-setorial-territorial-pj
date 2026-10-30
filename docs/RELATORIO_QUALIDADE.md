@@ -34,19 +34,15 @@ Snapshot do case preparado em 29/10/2026, horário de São Paulo.
 
 ## Interface e navegador
 
-Testes executados no Microsoft Edge em modo headless, sobre a aplicação local. Cada cenário percorreu as interações e terminou na visão indicada. As dimensões abaixo são as larguras internas efetivamente informadas pelo navegador.
+Revisão de interface em 30/10/2026. Testes executados no Microsoft Edge headless, em página local. Cada cenário percorreu as quatro visões e verificou o botão de abrir/fechar o menu, seus estados de acessibilidade, a ausência da seção AWS e o rodapé lateral simplificado.
 
 | Visão final | Largura interna | Verificações | Resultado |
 |---|---:|---:|---|
-| companies | 496 px | 24 | Passou |
-| companies | 1576 px | 24 | Passou |
-| detail | 1342 px | 24 | Passou |
-| overview | 496 px | 24 | Passou |
-| overview | 1576 px | 24 | Passou |
+| overview | 1576 px | 13 | Passou |
+| overview | 496 px | 13 | Passou |
+| companies | 1576 px | 13 | Passou |
 
-Os cenários exercitaram a matriz, o detalhe, troca de competência, filtros de porte, estado sem histórico, edição e restauração de parâmetros, busca de empresas, exportação de ficha e CSV, metodologia, arquitetura, modo apresentação, conteúdo válido e ausência de transbordamento horizontal.
-
-As exportações foram interceptadas em memória no teste para verificar conteúdo sem gravar arquivos na pasta de downloads. Capturas representativas foram inspecionadas visualmente. A primeira abertura também foi verificada diretamente por arquivo local, sem servidor.
+Capturas limpas do panorama e da consulta por empresa foram inspecionadas. Os testes da versão inicial também exercitaram filtros, regras, busca e exportações; esses cálculos e funções não foram alterados nesta revisão. O HTML e as fontes foram conferidos para confirmar a remoção da arquitetura AWS da interface. A documentação AWS foi preservada para apoio à apresentação.
 
 ## Limites da validação
 

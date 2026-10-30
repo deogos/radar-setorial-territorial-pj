@@ -105,7 +105,7 @@ Prepare os percursos, mas preserve liberdade para navegar conforme surgirem perg
 4. Aumentar o piso para R$ 1 bilhão e mostrar a mudança de elegibilidade.
 5. Restaurar os parâmetros.
 
-Se não houver conexão no local, a demonstração continua disponível pelo HTML. Mantenha uma cópia extraída do pacote e capturas das telas como apoio.
+Se não houver conexão no local, a demonstração continua disponível pelo HTML. Mantenha uma cópia extraída do pacote e capturas das telas como apoio. A arquitetura AWS está apenas no material de apresentação, fora da interface.
 
 ## 8. Bloco de sensibilidade e escolhas
 

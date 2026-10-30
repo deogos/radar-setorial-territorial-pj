@@ -26,14 +26,14 @@ O produto já funciona e usa um snapshot público. Preserve:
 - separação entre contexto do grupo e dados individuais da companhia;
 - datas independentes do SCR.data e dos demonstrativos CVM;
 - fontes, unidades monetárias, versão e notas de enquadramento;
-- exportações e modo apresentação.
+- exportações e controle do menu lateral.
 
 Edite os componentes visuais em web/index.template.html, web/style.css e web/app.js.
 Use os assets e componentes IDS efetivamente disponíveis aqui. Não invente nomes de
 componentes ou dependências internas. Mantenha uma versão portátil offline quando
 isso for compatível com os assets fornecidos.
 
-Depois gere o HTML usando python scripts/build.py. Confira as cinco visões,
+Depois gere o HTML usando python scripts/build.py. Confira as quatro visões,
 filtros, navegação da matriz, ficha, CSV, estado sem dados e histórico inicial.
 Não inclua dados internos de clientes no pacote público ou em repositório público.
 ```
@@ -64,13 +64,13 @@ Exigir quatro competências contínuas com saldo positivo. Bases pequenas, sem
 denominador ou sem histórico ficam sem classificação. Dois sinais significam
 ambos os gatilhos acionados. Sem gatilho não significa baixo risco.
 
-Criar cinco visões:
+Criar quatro visões:
 1) Panorama: KPIs nacionais, matriz setor x UF e ranking descritivo.
 2) Detalhe: série do recorte contra Brasil e saldos do numerador e denominador.
 3) Empresas reais: amostra em companies, com CNPJ, fonte, atividade, enquadramento,
    informações financeiras consolidadas e perguntas de análise.
 4) Metodologia: fórmulas, fontes, parâmetros e limitações.
-5) Arquitetura: MVP implementado e evolução AWS proposta, sem alegar implantação.
+A arquitetura AWS fica somente na documentação de apoio à apresentação, fora do HTML.
 
 Empresas são exemplos públicos, sem atribuição de vínculo com o banco ou atraso.
 A seção do comparador é um mapeamento econômico editorial; não é CNAE cadastral

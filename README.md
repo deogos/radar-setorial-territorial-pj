@@ -1,7 +1,7 @@
 # Radar Setorial-Territorial PJ
 
 <!-- PUBLICATION -->
-[Abrir a demo no navegador](https://deogos.github.io/radar-setorial-territorial-pj/) · [Baixar o pacote do GitHub](https://github.com/deogos/radar-setorial-territorial-pj/archive/refs/heads/codex/radar-setorial-pj.zip)
+Repositório temporariamente privado. O GitHub Pages está despublicado. Abra `index.html` localmente para usar a demo.
 
 Consulta demonstrativa de contexto de crédito para apoiar a revisão de casos PJ em recuperação e reestruturação. Usa dados públicos do Banco Central e informações públicas de 12 companhias da CVM.
 
@@ -22,8 +22,8 @@ No GitHub, use **Code → Download ZIP**, extraia o pacote e abra o HTML. Se o G
 - Piso de materialidade ajustável, histórico contínuo e classificação explicada.
 - Detalhe com série histórica, numerador e denominador.
 - Consulta a 12 empresas reais com cadastro, atividade, demonstrativo consolidado e fontes.
-- Exportação de CSV e ficha HTML, além de modo apresentação.
-- Explicações de metodologia e arquitetura AWS dentro da aplicação.
+- Exportação de CSV e ficha HTML, além de controle para abrir e fechar o menu lateral.
+- Metodologia dentro da aplicação e arquitetura AWS em documento separado para a apresentação.
 
 O processamento examinou 6.276.330 linhas brutas, filtrou 2.557.914 linhas PJ e publicou 53.100 agregados. Os detalhes da execução e das verificações estão no relatório de qualidade.
 
